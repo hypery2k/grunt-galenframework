@@ -6,3 +6,5 @@ galen-cli/lib
 /npm-debug.log
 .idea
 example/dynamic-input-test/dist/
+
+*.swp
