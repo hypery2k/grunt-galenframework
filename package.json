@@ -4,8 +4,7 @@
   "description": "Grunt plugin for Galen Framework",
   "files": [
     "tasks",
-    "lib",
-    "galen-cli"
+    "lib"
   ],
   "repository": {
     "type": "git",
@@ -26,10 +25,6 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13"
-  },
   "author": {
     "name": "Martin Reinhardt"
   },
@@ -39,8 +34,11 @@
     "download": "^4.1.2",
     "galenframework": "2.2.0"
   },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13"
+  },
   "scripts": {
-    "postinstall": "node galen-cli/galen",
-    "test": "cd test && npm install && grunt"
+    "test": "cd test && npm install ../ && grunt && cd ../example && cd dynamic-input-test && npm install ../../ --save-dev && grunt"
   }
 }

@@ -39,7 +39,7 @@ You might find these articles helpful during the preparations:
 2. SauceLabs Screen Resolutions: [link](https://docs.saucelabs.com/reference/test-configuration/#specifying-the-screen-resolution)
 
 # Writing Galen tests
-`grunt-galen` exposes a useful `gl.js` module<sup>1</sup>, so you can spend more time improving your project, rather than writing the test files. 
+`grunt-galenframework` exposes a useful `gl.js` module<sup>1</sup>, so you can spend more time improving your project, rather than writing the test files.
 
 Test files' main role is to assign  `.spec` files to their target pages of the project. For example `example-test.test.js` can look like this:
 
@@ -50,15 +50,15 @@ forAll(config.getDevices(), function (device) {
   // Just like unit test's `it( ... )`
   test('Example on ' + device.deviceName, function () {
     gl.openPage(device, config.getProjectPage());
-    
+
     gl.runSpecFile(device, './test/example-test.spec');
   });
 });
 ```
 
-This test suite runs the `example-test.spec` file against the main project page. 
+This test suite runs the `example-test.spec` file against the main project page.
 
-Remember that you are not bound to the `gl.js` framework and, if you are familiar with vanilla Galen API, you are welcome to use it with `grunt-galen`. ([more on Galen javascript API](http://galenframework.com/docs/reference-javascript-tests-guide/))
+Remember that you are not bound to the `gl.js` framework and, if you are familiar with vanilla Galen API, you are welcome to use it with `grunt-galenframework`. ([more on Galen javascript API](http://galenframework.com/docs/reference-javascript-tests-guide/))
 
 <sup>1</sup> Full `gl.js` docs can be found along with task configuration reference at the bottom of this README.
 
@@ -68,22 +68,22 @@ Example configuration for a simple Galen task:
 ```js
 galen: {
   local: {
-  
+
     // Check all test.js files in the test directory
     src: ['test/**/*.test.js'],
     options: {
-    
+
       // Run test on the localhost:3000
       url: 'http://127.0.0.1:3000',
       devices: {
-        
+
         // Run tests in firefox browser, scaled to basic desktop resolution
         desktop: {
           deviceName: 'desktop',
           browser: 'firefox',
           size: '1280x800'
         },
-        
+
         // Also run them in firefox, but scaled to iPad screen size
         tablet: {
           deviceName: 'tablet',
@@ -108,7 +108,7 @@ Now just run the command `grunt galen:local` and enjoy the show!
 default: ***false***
 
 ## options.project
-> Object containing basic information about the project. 
+> Object containing basic information about the project.
 
 default: ***undefined***
 
@@ -123,9 +123,9 @@ default: ***http://127.0.0.1:80***
 default: ***Project***
 
 ## options.url
-> URL of the project. 
+> URL of the project.
 
-> Overriden by the options.project.url, if defined. 
+> Overriden by the options.project.url, if defined.
 
 > Project URL is not necessary, although it is passed to test files via configuration and can be easily read in every test suite via getProjectPage() and getProjectSubpage(subpage).
 
@@ -165,7 +165,7 @@ default: ***''***
 example: ***'report/testng.xml'***
 
 ## options.parallelTests
-> Set to an positive integer if you wish Galen to run tests in parallel 
+> Set to an positive integer if you wish Galen to run tests in parallel
 
 default: ***1***
 
@@ -224,7 +224,7 @@ When included, `gl.js` exposes its public interface to the test file in the glob
 ### gl.openPage ([Object] device, [String] url [, [String] url, [Object] primaryFields, [Object] secondaryFields])
 > Open target page in the browser on a target device. If page times out, test will be failed.
 
-> If pageElements is defined, Galen will attemp to fetch these elements from the webpage. 
+> If pageElements is defined, Galen will attemp to fetch these elements from the webpage.
 
 **device*** - a device specification
 
@@ -283,5 +283,5 @@ username: 'gruntgalen-sl',
 accessKey: '5fa3a9f6-a912-4294-b254-6041410702f5'
 ```
 
-# License 
+# License
 MIT :octocat:

@@ -258,8 +258,9 @@ module.exports = function (grunt) {
 
       var stack = testFiles.map(function (filePath) {
         return function (cb) {
+          var localCommand = process.platform === 'win32' ? '/../node_modules/galenframework/galen.cmd' : '/../node_modules/galenframework/galen';
           var command = [
-            galenCliAvailable ? 'galen' : 'node ' + __dirname + '/../galen-cli/cli.js',
+            galenCliAvailable ? 'galen' : __dirname + localCommand,
             'test',
             filePath,
             htmlReport,

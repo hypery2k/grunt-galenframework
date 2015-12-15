@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
-          port: 3000 
+          port: 3000
         }
       }
     },
@@ -16,6 +16,8 @@ module.exports = function (grunt) {
         options: {
           output: true,
           url: 'http://127.0.0.1:3000',
+          htmlReport: true,
+          htmlReportDest: 'dist',
           devices: {
             desktop: {
               deviceName: 'desktop',
@@ -32,9 +34,9 @@ module.exports = function (grunt) {
       }
     }
   });
-  
+
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-galen');
-  
+  grunt.loadNpmTasks('grunt-galenframework');
+
   grunt.registerTask('default', ['connect:server', 'galen:local']);
 };

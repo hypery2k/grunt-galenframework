@@ -1,0 +1,19 @@
+@objects
+  box     css   .container
+  trigger css   .trigger
+  popup   css   .popup
+
+
+= Test Section =
+  box:
+    visible
+
+  trigger:
+    visible
+    inside box
+    above popup
+
+  popup:
+    visible
+    inside box
+    below trigger
