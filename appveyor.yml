@@ -1,0 +1,33 @@
+# appveyor file
+# http://www.appveyor.com/docs/appveyor-yml
+environment:
+  matrix:
+  # NPM
+  - npm_version: "2"
+  - npm_version: "3"
+  # node.js
+  - nodejs_version: "0.10"
+  - nodejs_version: "0.12"
+  - nodejs_version: "3"
+  - nodejs_version: "4"
+  - nodejs_version: "5"
+
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node $env:nodejs_version and NPM $env:npm_version
+  - node --version
+  - npm --version
+  - npm install -g npm@$env:npm_version
+  - npm install -g grunt
+  - npm install -g jshint
+  - npm install -g istanbul
+  - npm install -g istanbul-coveralls
+  - npm install -g nodeunit
+
+build: off
+
+test_script:
+  - npm test

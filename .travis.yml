@@ -7,12 +7,18 @@ node_js:
   - "5.0"
 env:
   - DISABLE_SAUCELABS=true
-  - NPM_VERSION=3
   - NPM_VERSION=2
-script: npm test
+  - NPM_VERSION=3
 before_install:
   - npm install -g npm@$NPM_VERSION
 before_script:
+  - npm install -g grunt
+  - npm install -g jshint
+  - npm install -g istanbul
+  - npm install -g istanbul-coveralls
+  - npm install -g nodeunit
+  - npm install
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
+script: npm test
