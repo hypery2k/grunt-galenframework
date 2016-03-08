@@ -1,6 +1,6 @@
 {
   "name": "grunt-galenframework",
-  "version": "2.0.0-dev",
+  "version": "2.2.3",
   "description": "Grunt plugin for Galen Framework",
   "files": [
     "tasks",
@@ -32,13 +32,13 @@
   "dependencies": {
     "async": "^0.9.0",
     "download": "^4.1.2",
-    "galenframework": "2.2.0"
+    "galenframework": "2.2.3"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13"
   },
   "scripts": {
-    "test": "cd test && npm install ../ && grunt && cd ../example && cd dynamic-input-test && npm install ../../ --save-dev && grunt"
+    "test": "cd test && npm install && npm install ../ && grunt && cd ../example && cd dynamic-input-test && npm install && npm install ../../ --save-dev && grunt"
   }
 }
