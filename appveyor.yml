@@ -25,6 +25,7 @@ install:
   - npm install -g istanbul
   - npm install -g istanbul-coveralls
   - npm install -g nodeunit
+  - npm install
 
 build: off
 
