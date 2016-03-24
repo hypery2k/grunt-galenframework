@@ -247,6 +247,7 @@ module.exports = function (grunt) {
      * TODO: rename `cb` to `callback`s.
      */
     function runGalenTests(cb) {
+      grunt.log.debug('Running galen tests');
       var testFiles = getTestingFiles();
       var htmlReport = options.htmlReport === true ? '--htmlreport ' + (options.htmlReportDest || '') : '';
       var testngReport = options.testngReport === true ? '--testngreport ' + (options.testngReportDest || '') : '';
@@ -285,43 +286,38 @@ module.exports = function (grunt) {
             htmlReport,
             testngReport
           ].join(' ');
-
+          grunt.log.debug('Starting galen with command: ' + command);
           var padding = 4;
           var spaces = Array(Math.abs(resultPadding - filePath.length) + padding).join(' ');
 
-          grunt.log.write('    • ' + filePath + spaces);
-
+          grunt.log.writeln('    • ' + filePath + spaces);
           childprocess.exec(command, function (err, output, erroutput) {
+            grunt.log.debug('Got following output from galen : ' + output);
             outputs.push(output);
             if (err) {
+              grunt.log.debug('Got following error: ' + err);
               return cb(err);
-            } else if (erroutput.replace(/\s/g, '')) {
+            } else {
+              if (erroutput.replace(/\s/g, '')) {
 
-              if ((erroutput.match(/deprecat(ed)?/gm) || []).length > 0) {
-                erroutput = erroutput.replace(/\n/gm, ' ');
+                if ((erroutput.match(/deprecat(ed)?/gm) || []).length > 0) {
+                  erroutput = erroutput.replace(/\n/gm, ' ');
+                  grunt.log.debug('Got following deprecation warnings: ' + erroutput.yellow);
 
-                /*
-                 * This line can be uncommented to show warnings in the console.
-                 */
-                //log(' (! ' + erroutput.yellow + ') ');
-
+                } else {
+                  log('failed'.red);
+                  reports.push(erroutput);
+                }
               } else {
-                log('failed'.red);
-                reports.push(erroutput);
-
+                if (isFailed(output)) {
+                  log('failed'.red);
+                } else {
+                  log('done'.green);
+                }
+                reports.push(output);
                 return cb();
               }
-
             }
-
-            if (isFailed(output)) {
-              log('failed'.red);
-            } else {
-              log('done'.green);
-            }
-
-            reports.push(output);
-            return cb(null);
           });
         };
 
@@ -337,6 +333,7 @@ module.exports = function (grunt) {
     function isFailed(testLog) {
       var failed = /Total failures: (.*)\n/g.exec(testLog);
       failed = parseInt(failed.toString().replace('Total failures: ', ''));
+      grunt.log.debug('isFailed?: ' + failed != 0);
       return failed != 0;
     }
 
@@ -345,6 +342,7 @@ module.exports = function (grunt) {
      * the async Grunt task with done().
      */
     function finishGalenTests(cb) {
+      grunt.log.debug('Gathering galen test result');
       var outputLog = outputs.join('\n\r');
       var testLog = reports.join('\n\r');
       try {
