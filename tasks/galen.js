@@ -298,7 +298,7 @@ module.exports = function (grunt) {
               grunt.log.debug('Got following error: ' + err);
               return cb(err);
             } else {
-              if (erroutput.replace(/\s/g, '')) {
+              if (erroutput && erroutput.replace(/\s/g, '')) {
 
                 if ((erroutput.match(/deprecat(ed)?/gm) || []).length > 0) {
                   erroutput = erroutput.replace(/\n/gm, ' ');
