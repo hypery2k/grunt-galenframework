@@ -1,5 +1,6 @@
 /*
- * @name grunt-galen
+ * @name grunt-galenframework
+ * @author hypery2k
  * @author mjurczyk
  *
  * @exports task.galen
@@ -9,9 +10,10 @@
  * @requires fs
  * @requires childprocess
  */
-var fs = require('fs');
-var childprocess = require('child_process');
-var async = require('async');
+var fs = require('fs'),
+  path = require("path"),
+  childprocess = require('child_process'),
+  async = require('async');
 
 /**
  * Grunt task.
@@ -263,9 +265,21 @@ module.exports = function (grunt) {
 
       var stack = testFiles.map(function (filePath) {
         return function (cb) {
-          var localCommand = process.platform === 'win32' ? '/../node_modules/galenframework/galen.cmd' : '/../node_modules/galenframework/galen';
+          var localCommand = path.resolve(__dirname + '/../node_modules/galenframework/bin/galen' + (process.platform === 'win32' ? '.cmd' : ''));
+          fs.stat(localCommand, function (err) {
+            // resolve for NPM3+
+            if (err) {
+              localCommand = path.resolve(__dirname + '/../../galenframework/bin/galen' + (process.platform === 'win32' ? '.cmd' : ''));
+            }
+            fs.stat(localCommand, function (err) {
+              // resolve for NPM3+
+              if (err) {
+                throw new Error("Cannot find Galenframework at " + localCommand);
+              }
+            });
+          });
           var command = [
-            galenCliAvailable ? 'galen' : __dirname + localCommand,
+            galenCliAvailable ? 'galen' : localCommand,
             'test',
             filePath,
             htmlReport,
@@ -278,7 +292,6 @@ module.exports = function (grunt) {
           grunt.log.write('    • ' + filePath + spaces);
 
           childprocess.exec(command, function (err, output, erroutput) {
-
             outputs.push(output);
             if (err) {
               return cb(err);
@@ -308,7 +321,6 @@ module.exports = function (grunt) {
             }
 
             reports.push(output);
-
             return cb(null);
           });
         };
@@ -336,7 +348,6 @@ module.exports = function (grunt) {
       var outputLog = outputs.join('\n\r');
       var testLog = reports.join('\n\r');
       try {
-
         var total = /Total tests: (.*)\n/g.exec(testLog);
         total = parseInt(total.toString().replace('Total tests: ', ''));
 
@@ -364,7 +375,7 @@ module.exports = function (grunt) {
           grunt.fail.warn(status.failed + ' test failed [' + parseInt(100 - status.percentage) + '%]');
         }
       } catch (e) {
-        grunt.fail.fatal('Unkown error during parsing Galen response: \n\r\n\r' + outputLog);
+        grunt.fail.fatal('Unknown error during parsing Galen response: \n\r\n\r' + outputLog);
       }
 
       return cb();
