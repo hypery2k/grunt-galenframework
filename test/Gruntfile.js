@@ -2,7 +2,7 @@ module.exports = function (grunt) {
   /*
    * Developer test suite. Uses the current (../tasks/galen.js) version
    * of the framework to launch the dynamic test example.
-   * 
+   *
    */
   var sauceUser = 'galen_mreinhardt';
   var sauceKey = 'aff16b42-9c23-4cb6-adf7-38da9e02193a';
@@ -37,7 +37,6 @@ module.exports = function (grunt) {
       sl: {
         src: ['test/**/example.test.js'],
         options: {
-          parallelTests: 3,
           seleniumGrid: {
             login: sauceUser,
             username: sauceUser,
@@ -103,8 +102,8 @@ module.exports = function (grunt) {
       }
     }
   });
-  
+
   grunt.loadTasks('../tasks');
-  
+
   grunt.registerTask('default', testPipeline);
 };
