@@ -19,7 +19,7 @@ install:
   - node --version
   - npm --version
   - npm install -g npm@%NPM_VERSION%
-  - npm install -g gulp
+  - npm install -g grunt
   - npm install -g jshint
   - npm install -g mocha
   - npm install -g istanbul
