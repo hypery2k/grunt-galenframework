@@ -331,10 +331,13 @@ module.exports = function (grunt) {
      * @return {Boolean} - true if report is failed
      */
     function isFailed(testLog) {
-      var failed = /Total failures: (.*)\n/g.exec(testLog);
-      failed = parseInt(failed.toString().replace('Total failures: ', ''));
-      grunt.log.debug('isFailed?: ' + failed != 0);
-      return failed != 0;
+      var failures = /Total failures: (.*)\n/g.exec(testLog).concat(),
+        failed = false;
+      if (failures) {
+        failed = parseInt(failures.toString().replace('Total failures: ', '')) != 0;
+      }
+      grunt.log.debug('isFailed(): ' + failed);
+      return failed;
     }
 
     /**
@@ -342,7 +345,7 @@ module.exports = function (grunt) {
      * the async Grunt task with done().
      */
     function finishGalenTests(cb) {
-      grunt.log.debug('Gathering galen test result');
+      grunt.log.debug('Starting finishGalenTests()');
       var outputLog = outputs.join('\n\r');
       var testLog = reports.join('\n\r');
       try {
