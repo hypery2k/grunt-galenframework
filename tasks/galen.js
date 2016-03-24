@@ -331,9 +331,10 @@ module.exports = function (grunt) {
      * @return {Boolean} - true if report is failed
      */
     function isFailed(testLog) {
-      var failures = /Total failures: (.*)\n/g.exec(testLog).concat(),
+      var logInfo = /Total failures: (.*)\n/g.exec(testLog),
         failed = false;
-      if (failures) {
+      if (logInfo) {
+        var failures = logInfo.concat();
         failed = parseInt(failures.toString().replace('Total failures: ', '')) != 0;
       }
       grunt.log.debug('isFailed(): ' + failed);
