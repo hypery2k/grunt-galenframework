@@ -42,6 +42,12 @@ module.exports = function (grunt) {
      * @output
      * @private
      */
+    var outputs = [];
+
+    /*
+     * @output
+     * @private
+     */
     var reports = [];
 
     /**
@@ -272,6 +278,8 @@ module.exports = function (grunt) {
           grunt.log.write('    • ' + filePath + spaces);
 
           childprocess.exec(command, function (err, output, erroutput) {
+
+            outputs.push(output);
             if (err) {
               return cb(err);
             } else if (erroutput.replace(/\s/g, '')) {
@@ -282,7 +290,8 @@ module.exports = function (grunt) {
                 /*
                  * This line can be uncommented to show warnings in the console.
                  */
-                log(' (! ' + erroutput.yellow + ') ');
+                //log(' (! ' + erroutput.yellow + ') ');
+
               } else {
                 log('failed'.red);
                 reports.push(erroutput);
@@ -324,33 +333,38 @@ module.exports = function (grunt) {
      * the async Grunt task with done().
      */
     function finishGalenTests(cb) {
+      var outputLog = outputs.join('\n\r');
       var testLog = reports.join('\n\r');
+      try {
 
-      var total = /Total tests: (.*)\n/g.exec(testLog);
-      total = parseInt(total.toString().replace('Total tests: ', ''));
+        var total = /Total tests: (.*)\n/g.exec(testLog);
+        total = parseInt(total.toString().replace('Total tests: ', ''));
 
-      var failed = /Total failures: (.*)\n/g.exec(testLog);
-      failed = parseInt(failed.toString().replace('Total failures: ', ''));
+        var failed = /Total failures: (.*)\n/g.exec(testLog);
+        failed = parseInt(failed.toString().replace('Total failures: ', ''));
 
-      var passed = total - failed;
+        var passed = total - failed;
 
-      var status = {
-        passed: passed,
-        failed: failed,
-        total: total,
-        percentage: 0
-      };
+        var status = {
+          passed: passed,
+          failed: failed,
+          total: total,
+          percentage: 0
+        };
 
-      status.percentage = status.total !== 0 ? status.passed / status.total * 100 : 0;
+        status.percentage = status.total !== 0 ? status.passed / status.total * 100 : 0;
 
-      if (options.output === true) {
-        log(testLog);
-      }
+        if (options.output === true) {
+          log(testLog);
+        }
 
-      log(status.passed + ' tests passed [' + parseInt(status.percentage) + '%]');
+        log(status.passed + ' tests passed [' + parseInt(status.percentage) + '%]');
 
-      if (status.failed) {
-        grunt.fail.warn(status.failed + ' test failed [' + parseInt(100 - status.percentage) + '%]');
+        if (status.failed) {
+          grunt.fail.warn(status.failed + ' test failed [' + parseInt(100 - status.percentage) + '%]');
+        }
+      } catch (e) {
+        grunt.fail.fatal('Unkown error during parsing Galen response: \n\r\n\r' + outputLog);
       }
 
       return cb();
