@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         concat: true
       },
       local: {
-        src: ['test/**/example.test.js'],
+        src: ['test/**/*.js'],
         options: {
           devices: {
             desktop: {
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         }
       },
       sl: {
-        src: ['test/**/example.test.js'],
+        src: ['test/**/*.js'],
         options: {
           seleniumGrid: {
             login: sauceUser,
