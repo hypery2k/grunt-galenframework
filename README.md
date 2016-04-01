@@ -7,7 +7,11 @@
 
 [![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework) [![Build status](https://ci.appveyor.com/api/projects/status/wumeagy245308lc3?svg=true)](https://ci.appveyor.com/project/hypery2k/grunt-galenframework) [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) [![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
 
+
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) [![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
+
 [![NPM](https://nodei.co/npm/grunt-galenframework.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/grunt-galenframework/)
+
 
 This module downloads the GalenFramework for you
 
