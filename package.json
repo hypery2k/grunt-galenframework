@@ -1,6 +1,6 @@
 {
   "name": "grunt-galenframework",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Grunt plugin for Galen Framework",
   "files": [
     "tasks",
@@ -32,7 +32,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "download": "^4.1.2",
-    "galenframework": "2.3.0-beta.0"
+    "galenframework": "2.2.4"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
