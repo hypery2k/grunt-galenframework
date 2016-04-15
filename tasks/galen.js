@@ -25,6 +25,18 @@ module.exports = function (grunt) {
      * log  logging shortcut
      */
     var log = grunt.log.writeln;
+    /*
+     * debug log  logging shortcut
+     */
+    var debug = grunt.log.debug;
+    /*
+     * warn log  logging shortcut
+     */
+    var warn = grunt.fail.warn;
+    /*
+     * fatal log  logging shortcut
+     */
+    var fatal = grunt.fail.fatal;
 
     /*
      * @input
@@ -139,7 +151,7 @@ module.exports = function (grunt) {
 
         Object.keys(device.desiredCapabilities || {}).forEach(function (param) {
           if (typeof device.desiredCapabilities[param] !== 'string') {
-            grunt.fail.fatal('All desiredCapabilities have to be string variables. [failed on capability `' + param + '`]');
+            fatal('All desiredCapabilities have to be string variables. [failed on capability `' + param + '`]');
           }
         });
       });
@@ -247,7 +259,7 @@ module.exports = function (grunt) {
      * TODO: rename `cb` to `callback`s.
      */
     function runGalenTests(cb) {
-      grunt.log.debug('Running galen tests');
+      debug('Running galen tests');
       var testFiles = getTestingFiles();
       var htmlReport = options.htmlReport === true ? '--htmlreport ' + (options.htmlReportDest || '') : '';
       var testngReport = options.testngReport === true ? '--testngreport ' + (options.testngReportDest || '') : '';
@@ -286,23 +298,23 @@ module.exports = function (grunt) {
             htmlReport,
             testngReport
           ].join(' ');
-          grunt.log.debug('Starting galen with command: ' + command);
+          debug('Starting galen with command: ' + command);
           var padding = 4;
           var spaces = Array(Math.abs(resultPadding - filePath.length) + padding).join(' ');
 
           grunt.log.writeln('    • ' + filePath + spaces);
           childprocess.exec(command, function (err, output, erroutput) {
-            grunt.log.debug('Got following output from galen : ' + output);
+            debug('Got following output from galen : ' + output);
             outputs.push(output);
             if (err) {
-              grunt.log.debug('Got following error: ' + err);
+              debug('Got following error: ' + err);
               return cb(err);
             } else {
               if (erroutput && erroutput.replace(/\s/g, '')) {
 
                 if ((erroutput.match(/deprecat(ed)?/gm) || []).length > 0) {
                   erroutput = erroutput.replace(/\n/gm, ' ');
-                  grunt.log.debug('Got following deprecation warnings: ' + erroutput.yellow);
+                  debug('Got following deprecation warnings: ' + erroutput.yellow);
 
                 } else {
                   log('failed'.red);
@@ -337,7 +349,7 @@ module.exports = function (grunt) {
         var failures = logInfo.concat();
         failed = parseInt(failures.toString().replace('Total failures: ', '')) != 0;
       }
-      grunt.log.debug('isFailed(): ' + failed);
+      debug('isFailed(): ' + failed);
       return failed;
     }
 
@@ -346,17 +358,17 @@ module.exports = function (grunt) {
      * the async Grunt task with done().
      */
     function finishGalenTests(cb) {
-      grunt.log.debug('Starting finishGalenTests()');
+      debug('Starting finishGalenTests()');
       var outputLog = outputs.join('\n\r');
       var testLog = reports.join('\n\r');
       try {
         var total = /Total tests: (.*)(\n|\r)/g.exec(testLog);
         total = parseInt(total.toString().replace('Total tests: ', ''));
-        grunt.log.debug('   total tests: ' + total);
+        debug('   total tests: ' + total);
 
         var failed = /Total failures: (.*)(\n|\r)/g.exec(testLog);
         failed = parseInt(failed.toString().replace('Total failures: ', ''));
-        grunt.log.debug('   total failures: ' + failed);
+        debug('   total failures: ' + failed);
 
         var passed = total - failed;
 
@@ -376,11 +388,11 @@ module.exports = function (grunt) {
         log(status.passed + ' tests passed [' + parseInt(status.percentage) + '%]');
 
         if (status.failed) {
-          grunt.fail.warn(status.failed + ' test failed [' + parseInt(100 - status.percentage) + '%]');
+          warn(status.failed + ' test failed [' + parseInt(100 - status.percentage) + '%]');
         }
       } catch (e) {
-        grunt.fail.fatal('Unknown error during parsing Galen response: \n\r\n\r' + outputLog);
-        grunt.log.debug(e);
+        fatal('Unknown error during parsing Galen response: \n\r\n\r' + outputLog);
+        debug(e);
       }
 
       return cb();
@@ -407,7 +419,7 @@ module.exports = function (grunt) {
 
     process.on('uncaughtException', function (err) {
       console.error(err.stack);
-      grunt.fail.fatal(err);
+      fatal(err);
     });
   });
 };
