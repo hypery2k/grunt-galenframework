@@ -32,7 +32,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "download": "^4.1.2",
-    "galenframework": "2.2.4"
+    "galenframework": "2.2.5"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
