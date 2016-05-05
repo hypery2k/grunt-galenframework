@@ -279,18 +279,14 @@ module.exports = function (grunt) {
       var stack = testFiles.map(function (filePath) {
         return function (cb) {
           var localCommand = path.resolve(__dirname + '/../node_modules/galenframework/bin/galen' + (process.platform === 'win32' ? '.cmd' : ''));
-          fs.stat(localCommand, function (err) {
+          if(!fileExists(localCommand)) {
             // resolve for NPM3+
-            if (err) {
-              localCommand = path.resolve(__dirname + '/../../galenframework/bin/galen' + (process.platform === 'win32' ? '.cmd' : ''));
+            localCommand = path.resolve(__dirname + '/../../galenframework/bin/galen' + (process.platform === 'win32' ? '.cmd' : ''));
+            if(!fileExists(localCommand)) {
+              throw new Error("Cannot find Galenframework at " + localCommand);
             }
-            fs.stat(localCommand, function (err) {
-              // resolve for NPM3+
-              if (err) {
-                throw new Error("Cannot find Galenframework at " + localCommand);
-              }
-            });
-          });
+          }
+          
           var command = [
             galenCliAvailable ? 'galen' : localCommand,
             'test',
