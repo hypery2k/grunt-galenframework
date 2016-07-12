@@ -14,14 +14,14 @@
 
 
 > Feel free to **donate**
-> 
+>
 > <a href='https://pledgie.com/campaigns/31915'><img alt='Click here to lend your support to: NPM packages and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31915.png?skin_name=chrome' border='0' ></a>
 > <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JYG6LVEHB59TL">
 > <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif"/>
 > </img></a>
 > Or donate [Bitcoins](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D):
 > [![Bitcoin](https://martinreinhardt-online.de/bitcoin.png)](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D)
-> 
+>
 > Also via [greenaddress](https://greenaddress.it/pay/GA3ZPfh7As3Gc2oP6pQ1njxMij88u/)
 
 
@@ -293,6 +293,10 @@ login: 'gruntgalen-sl',
 username: 'gruntgalen-sl',
 accessKey: '5fa3a9f6-a912-4294-b254-6041410702f5'
 ```
+
+## Usage
+
+See [here](./PLUGIN_USAGE.MD#cordova.plugins.hotspot) for complete API reference.
 
 # License
 MIT :octocat:
