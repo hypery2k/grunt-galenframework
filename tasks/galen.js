@@ -286,7 +286,7 @@ module.exports = function (grunt) {
               throw new Error("Cannot find Galenframework at " + localCommand);
             }
           }
-          
+
           var command = [
             galenCliAvailable ? 'galen' : localCommand,
             'test',
@@ -313,18 +313,17 @@ module.exports = function (grunt) {
                   debug('Got following deprecation warnings: ' + erroutput.yellow);
 
                 } else {
-                  log('failed'.red);
-                  reports.push(erroutput);
+                  debug('Got following debug infos: ' + erroutput.yellow);
                 }
-              } else {
-                if (isFailed(output)) {
-                  log('failed'.red);
-                } else {
-                  log('done'.green);
-                }
-                reports.push(output);
-                return cb();
               }
+
+              if (isFailed(output)) {
+                log('failed'.red);
+              } else {
+                log('done'.green);
+              }
+              reports.push(output);
+              return cb();
             }
           });
         };
