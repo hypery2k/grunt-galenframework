@@ -8,3 +8,5 @@ galen-cli/lib
 example/dynamic-input-test/dist/
 
 *.swp
+
+dist/*
