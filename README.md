@@ -13,6 +13,18 @@
 [![NPM](https://nodei.co/npm/grunt-galenframework.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/grunt-galenframework/)
 
 
+> Feel free to **donate**
+> 
+> <a href='https://pledgie.com/campaigns/31915'><img alt='Click here to lend your support to: NPM packages and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31915.png?skin_name=chrome' border='0' ></a>
+> <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JYG6LVEHB59TL">
+> <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif"/>
+> </img></a>
+> Or donate [Bitcoins](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D):
+> [![Bitcoin](https://martinreinhardt-online.de/bitcoin.png)](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D)
+> 
+> Also via [greenaddress](https://greenaddress.it/pay/GA3ZPfh7As3Gc2oP6pQ1njxMij88u/)
+
+
 This module downloads the GalenFramework for you
 
 *Warning* - Galen framework requires Java runtime environment to work. Java is ***not*** included in this module.
