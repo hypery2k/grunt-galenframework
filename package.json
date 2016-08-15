@@ -1,6 +1,6 @@
 {
   "name": "grunt-galenframework",
-  "version": "2.2.6",
+  "version": "2.3.0",
   "description": "Grunt plugin for Galen Framework",
   "files": [
     "tasks",
@@ -31,8 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
-    "download": "^4.1.2",
-    "galenframework": "2.2.6"
+    "galenframework": "2.3.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -42,6 +41,6 @@
   },
   "scripts": {
     "test": "cd test && npm install && npm install ../ && grunt --debug && cd ../example && cd dynamic-input-test && npm install && npm install ../../ --save-dev && grunt --debug ",
-    "posttest": "jsdoc -c jsdoc.json && jsdoc2md tasks/galen.js > PLUGIN_USAGE.MD"
+    "posttest": "jsdoc -c jsdoc.json && jsdoc2md tasks/galen.js | sed s/hotSpotPlugin/cordova.plugins.hotspot/g | sed s/HotSpotPlugin/cordova.plugins.hotspot/g > PLUGIN_USAGE.MD"
   }
 }
