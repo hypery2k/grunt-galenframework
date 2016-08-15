@@ -335,18 +335,17 @@ var galenTasks = function (grunt) {
                   debug('Got following deprecation warnings: ' + erroutput.yellow);
 
                 } else {
-                  log('failed'.red);
-                  reports.push(erroutput);
+                  debug('Got following debug infos: ' + erroutput.yellow);
                 }
-              } else {
-                if (isFailed(output)) {
-                  log('failed'.red);
-                } else {
-                  log('done'.green);
-                }
-                reports.push(output);
-                return cb();
               }
+
+              if (isFailed(output)) {
+                log('failed'.red);
+              } else {
+                log('done'.green);
+              }
+              reports.push(output);
+              return cb();
             }
           });
         };
