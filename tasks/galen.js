@@ -284,6 +284,8 @@ var galenTasks = function (grunt) {
       debug('Running galen tests');
       var testFiles = getTestingFiles();
       var htmlReport = options.htmlReport === true ? '--htmlreport ' + (options.htmlReportDest || '') : '';
+      var junitReport = options.junitreport === true ? '--junitreport ' + (options.junitReportDest || '') : '';
+      var jsonReport = options.jsonreport === true ? '--jsonreport ' + (options.jsonReportDest || '') : '';
       var testngReport = options.testngReport === true ? '--testngreport ' + (options.testngReportDest || '') : '';
 
       var resultPadding = 0;
@@ -314,7 +316,9 @@ var galenTasks = function (grunt) {
             'test',
             filePath,
             htmlReport,
-            testngReport
+            testngReport,
+            junitReport,
+            jsonReport
           ].join(' ');
           debug('Starting galen with command: ' + command);
           var padding = 4;
