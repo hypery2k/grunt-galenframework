@@ -283,6 +283,7 @@ var galenTasks = function (grunt) {
     function runGalenTests(cb) {
       debug('Running galen tests');
       var testFiles = getTestingFiles();
+      var configFile = options.config === true ? '--config ' + (options.configFile || '') : '';
       var htmlReport = options.htmlReport === true ? '--htmlreport ' + (options.htmlReportDest || '') : '';
       var junitReport = options.junitreport === true ? '--junitreport ' + (options.junitReportDest || '') : '';
       var jsonReport = options.jsonreport === true ? '--jsonreport ' + (options.jsonReportDest || '') : '';
@@ -315,6 +316,7 @@ var galenTasks = function (grunt) {
             galenCliAvailable ? 'galen' : localCommand,
             'test',
             filePath,
+            configFile,
             htmlReport,
             testngReport,
             junitReport,
