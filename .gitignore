@@ -5,6 +5,7 @@ test/gl.js
 galen-cli/lib
 /npm-debug.log
 .idea
+test/.tmp_grunt-galen
 example/dynamic-input-test/dist/
 
 *.swp

@@ -14,14 +14,14 @@
 
 
 > Feel free to **donate**
-> 
+>
 > <a href='https://pledgie.com/campaigns/31915'><img alt='Click here to lend your support to: NPM packages and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31915.png?skin_name=chrome' border='0' ></a>
 > <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JYG6LVEHB59TL">
 > <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif"/>
 > </img></a>
 > Or donate [Bitcoins](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D):
 > [![Bitcoin](https://martinreinhardt-online.de/bitcoin.png)](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D)
-> 
+>
 > Also via [greenaddress](https://greenaddress.it/pay/GA3ZPfh7As3Gc2oP6pQ1njxMij88u/)
 
 
@@ -158,6 +158,16 @@ default: ***{}***
 
 required: ***true***
 
+## options.config
+> Set to `true`, if you want to use a config file.
+
+default: ***false***
+
+## options.configFile
+> Set to desired config file.
+
+default: ***''***
+
 ## options.htmlReport
 > Set to `true`, if you wish Galen to generate HTML report for every test suite.
 
@@ -168,10 +178,30 @@ default: ***false***
 
 default: ***''***
 
+## options.jsonreport
+> Set to `true`, if you wish Galen to generate JSON report for every test suite.
+
+default: ***false***
+
+## options.jsonReportDest
+> Set to desired JSON report directory.
+
+default: ***''***
+
 ## options.testngReport
 > Set to `true`, if you wish Galen to generate testNG report for every test suite.
 
 default: ***false***
+
+## options.junitreport
+> Set to `true`, if you wish Galen to generate JUnit report for every test suite.
+
+default: ***false***
+
+## options.junitReportDest
+> Set to desired JUnit report directory.
+
+default: ***''***
 
 ## options.testngReportDest
 > Set to desired testNG report directory.
