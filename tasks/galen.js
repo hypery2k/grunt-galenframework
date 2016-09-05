@@ -445,4 +445,4 @@ var galenTasks = function (grunt) {
  * Grunt task.
  * @param   {Object}   grunt Grunt
  */
-module.exports = galenTasks
+module.exports = galenTasks;
