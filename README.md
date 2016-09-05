@@ -158,6 +158,16 @@ default: ***{}***
 
 required: ***true***
 
+## options.config
+> Set to `true`, if you want to use a config file.
+
+default: ***false***
+
+## options.configFile
+> Set to desired config file.
+
+default: ***''***
+
 ## options.htmlReport
 > Set to `true`, if you wish Galen to generate HTML report for every test suite.
 
