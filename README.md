@@ -168,10 +168,30 @@ default: ***false***
 
 default: ***''***
 
+## options.jsonreport
+> Set to `true`, if you wish Galen to generate JSON report for every test suite.
+
+default: ***false***
+
+## options.jsonReportDest
+> Set to desired JSON report directory.
+
+default: ***''***
+
 ## options.testngReport
 > Set to `true`, if you wish Galen to generate testNG report for every test suite.
 
 default: ***false***
+
+## options.junitreport
+> Set to `true`, if you wish Galen to generate JUnit report for every test suite.
+
+default: ***false***
+
+## options.junitReportDest
+> Set to desired JUnit report directory.
+
+default: ***''***
 
 ## options.testngReportDest
 > Set to desired testNG report directory.
@@ -293,10 +313,6 @@ login: 'gruntgalen-sl',
 username: 'gruntgalen-sl',
 accessKey: '5fa3a9f6-a912-4294-b254-6041410702f5'
 ```
-
-## Usage
-
-See [here](./PLUGIN_USAGE.MD#cordova.plugins.hotspot) for complete API reference.
 
 # License
 MIT :octocat:
