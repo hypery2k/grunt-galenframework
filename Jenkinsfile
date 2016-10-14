@@ -24,8 +24,10 @@ node {
     }
 
     stage('Test') {
-      sh "npm run test"
-      junit '*/target/tests.js.xml'
+      wrap([$class: 'Xvfb']) {
+        sh "npm run test"
+        junit '*/target/tests.js.xml'
+      }
     }
 
     stage('Publish NPM snapshot') {
