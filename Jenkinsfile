@@ -29,7 +29,7 @@ node('mac') {
     }
 
     stage('Publish NPM snapshot') {
-      def currentVersionCore = sh(returnStdout: true, script: "npm version | grep \"{\" | tr -s ':'  | cut -d \"'\" -f 2").trim()
+      def currentVersionCore = sh(returnStdout: true, script: "npm version | grep \"{\" | tr -s ':'  | cut -d \"'\" -f 4").trim()
       def newVersionCore = "${currentVersionCore}-${buildNumber}"
       sh "npm version ${newVersionCore} --no-git-tag-version && npm publish --tag next"
     }
