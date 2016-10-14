@@ -3,7 +3,7 @@ properties properties: [
   [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/hypery2k/grunt-galenframework'],
 ]
 
-node {
+node('mac') {
   def buildNumber = env.BUILD_NUMBER
   def workspace = env.WORKSPACE
   def buildUrl = env.BUILD_URL
@@ -24,10 +24,8 @@ node {
     }
 
     stage('Test') {
-      wrap([$class: 'Xvfb']) {
-        sh "npm run test"
-        junit '*/target/tests.js.xml'
-      }
+      sh "npm run test"
+    //  junit '*/target/tests.js.xml'
     }
 
     stage('Publish NPM snapshot') {
