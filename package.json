@@ -22,13 +22,6 @@
     "TDD",
     "BDD"
   ],
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "author": {
-    "name": "Martin Reinhardt"
-  },
-  "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
     "galenframework": "2.3.2"
@@ -43,5 +36,13 @@
   "scripts": {
     "test": "cd test && npm install && npm install .. && grunt --debug",
     "posttest": "jsdoc -c jsdoc.json && jsdoc2md tasks/galen.js | sed s/hotSpotPlugin/cordova.plugins.hotspot/g | sed s/HotSpotPlugin/cordova.plugins.hotspot/g > PLUGIN_USAGE.MD"
+  },
+  "author": {
+    "name": "Martin Reinhardt"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 4.4",
+    "npm": ">= 3"
   }
 }

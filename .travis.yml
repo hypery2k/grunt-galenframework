@@ -2,17 +2,16 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-  - "0.12"
   - "4.0"
   - "4.3"
   - "4"
   - "5.0"
   - "5"
   - "6"
+  - "7"
   - "stable"
 env:
-  - DISABLE_SAUCELABS=true
-  - NPM_VERSION=2
+  - NPM_VERSION=4
   - NPM_VERSION=3
 before_install:
   - jdk_switcher use oraclejdk8
@@ -20,6 +19,7 @@ before_install:
 before_script:
   - npm install -g grunt
   - npm install -g jshint
+  - npm install -g mocha
   - npm install -g istanbul
   - npm install -g istanbul-coveralls
   - npm install -g nodeunit
@@ -27,4 +27,5 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
-script: npm test
+script:
+  - npm test
