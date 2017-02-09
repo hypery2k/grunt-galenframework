@@ -41,6 +41,18 @@ var fs = require('fs'),
   childprocess = require('child_process'),
   async = require('async');
 
+function resolveNodePath(module, subpath) {
+  var filename = path.resolve(__dirname + '/../node_modules/' + module + '/' + subpath);
+  try {
+    fs.statSync(filename);
+  }
+  catch (err) {
+    filename = path.resolve(__dirname + '/../../../node_modules/' + module + '/' + subpath);
+  }
+  return filename;
+}
+
+
 var galenTasks = function (grunt) {
   grunt.registerMultiTask('galen', 'Run Galen tests.', function () {
     /*
@@ -288,6 +300,8 @@ var galenTasks = function (grunt) {
       var junitReport = options.junitreport === true ? '--junitreport ' + (options.junitReportDest || '') : '';
       var jsonReport = options.jsonreport === true ? '--jsonreport ' + (options.jsonReportDest || '') : '';
       var testngReport = options.testngReport === true ? '--testngreport ' + (options.testngReportDest || '') : '';
+      var chromedriver = '-Dwebdriver.chrome.driver=' + resolveNodePath('chromedriver', 'bin/chromedriver');
+      var geckodriver = '-Dwebdriver.gecko.driver=' + resolveNodePath('geckodriver', 'bin/geckodriver');
 
       var resultPadding = 0;
       testFiles.forEach(function (filePath) {
@@ -320,7 +334,9 @@ var galenTasks = function (grunt) {
             htmlReport,
             testngReport,
             junitReport,
-            jsonReport
+            jsonReport,
+            chromedriver,
+            geckodriver
           ].join(' ');
           debug('Starting galen with command: ' + command);
           var padding = 4;

@@ -24,7 +24,9 @@
   ],
   "dependencies": {
     "async": "^0.9.0",
-    "galenframework": "2.3.2"
+    "chromedriver": "^2.27.2",
+    "galenframework": "2.3.2",
+    "geckodriver": "^1.3.0"
   },
   "devDependencies": {
     "conventional-changelog-cli": "1.2.0",
