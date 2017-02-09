@@ -1,6 +1,6 @@
 {
   "name": "grunt-galenframework",
-  "version": "2.3.2",
+  "version": "2.3.1",
   "description": "Grunt plugin for Galen Framework",
   "files": [
     "tasks",
@@ -27,6 +27,7 @@
     "galenframework": "2.3.2"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "1.2.0",
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
     "jsdoc": "3.4.0",
@@ -35,7 +36,13 @@
   },
   "scripts": {
     "test": "cd test && npm install && npm install .. && grunt --debug",
-    "posttest": "jsdoc -c jsdoc.json && jsdoc2md tasks/galen.js | sed s/hotSpotPlugin/cordova.plugins.hotspot/g | sed s/HotSpotPlugin/cordova.plugins.hotspot/g > PLUGIN_USAGE.MD"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "changelog:add": "git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
+    "release:pre": "npm run test",
+    "release:post": "npm run changelog && npm run changelog:add",
+    "release:major": "npm version major && npm run release:pre && git push origin && git push origin --tags && npm run release:post && npm publish",
+    "release:minor": "npm version minor && npm run release:pre && git push origin && git push origin --tags && npm run release:post && npm publish",
+    "release:patch": "npm version patch && npm run release:pre && git push origin && git push origin --tags && npm run release:post && npm publish"
   },
   "author": {
     "name": "Martin Reinhardt"
