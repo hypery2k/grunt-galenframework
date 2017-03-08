@@ -8,7 +8,7 @@ this.SubmitPage = function (driver) {
 
 
 test("Home page test", function () {
-  var driver = createDriver("http://samples.galenframework.com/tutorial-color-scheme/tutorial.html", "1400x1100", "firefox");
+  var driver = createDriver("http://samples.galenframework.com/tutorial-color-scheme/tutorial.html", "1400x1100", "phantomjs");
 
   var submitPage = new SubmitPage(driver);
 

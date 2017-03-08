@@ -9,14 +9,14 @@ afterTestSuite(function () {
 forAll({
   desktop: {
     deviceName: 'desktop',
-    browser: 'firefox',
+    browser: 'phantomjs',
     size: '800x600'
   }
  }, function (device) {
-  
+
   test('Test sample without gl on ' + device.deviceName, function () {
     driver = createDriver(url, device.size, device.browser);
-    
+
     checkLayout(driver, specFile, [device.deviceName, 'no-gl']);
   });
 });
