@@ -13,7 +13,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     galen: {
       options: {
-        url: 'http://example.com/',
+        url: 'http://example.com',
         output: true,
         concat: true
       },
@@ -23,12 +23,12 @@ module.exports = function (grunt) {
           devices: {
             desktop: {
               deviceName: 'desktop',
-              browser: 'firefox',
+              browser: 'phantomjs',
               size: '1280x800'
             },
             tablet: {
               deviceName: 'tablet',
-              browser: 'firefox',
+              browser: 'phantomjs',
               size: '768x576'
             }
           }
