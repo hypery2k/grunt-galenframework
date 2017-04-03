@@ -302,7 +302,7 @@ var galenTasks = function (grunt) {
       var testngReport = options.testngReport === true ? '--testngreport ' + (options.testngReportDest || '') : '';
       var chromedriver = '-Dwebdriver.chrome.driver=' + resolveNodePath('chromedriver', 'bin/chromedriver');
       var geckodriver = '-Dwebdriver.gecko.driver=' + resolveNodePath('geckodriver', 'bin/geckodriver');
-      var ghostdriver = '-Dphantomjs.binary.path=' + resolveNodePath('phantomjs-prebuilt', 'bin/phantomjs');
+      var ghostdriver = '';// FIXME '-Dphantomjs.binary.path=' + resolveNodePath('phantomjs-prebuilt', 'bin/phantomjs');
 
 
       var resultPadding = 0;
