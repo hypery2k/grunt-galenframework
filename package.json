@@ -1,6 +1,6 @@
 {
   "name": "grunt-galenframework",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Grunt plugin for Galen Framework",
   "files": [
     "tasks",
