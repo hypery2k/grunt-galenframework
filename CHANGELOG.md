@@ -1,3 +1,13 @@
+<a name="2.3.4"></a>
+## [2.3.4](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.3...v2.3.4) (2017-07-21)
+
+
+### Features
+
+* **Galen:** Use newer Galen Version ([097fd7b](https://github.com/hypery2k/grunt-galenframework/commit/097fd7b))
+
+
+
 <a name="2.3.3"></a>
 ## [2.3.3](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.2...v2.3.3) (2017-04-03)
 
