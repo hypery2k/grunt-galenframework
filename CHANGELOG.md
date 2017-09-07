@@ -1,5 +1,25 @@
+<a name="2.3.5"></a>
+## [2.3.5](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.4...v2.3.5) (2017-09-07)
+
+
+### Bug Fixes
+
+* **package:** update chromedriver to version 2.31.0 ([736340d](https://github.com/hypery2k/grunt-galenframework/commit/736340d))
+* **package:** update chromedriver to version 2.32.0 ([b49229f](https://github.com/hypery2k/grunt-galenframework/commit/b49229f))
+* **package:** update chromedriver to version 2.32.1 ([fbe1078](https://github.com/hypery2k/grunt-galenframework/commit/fbe1078))
+* **package:** update galenframework to version 2.3.5 ([6943c28](https://github.com/hypery2k/grunt-galenframework/commit/6943c28))
+* **package:** update geckodriver to version 1.8.1 ([822bf24](https://github.com/hypery2k/grunt-galenframework/commit/822bf24))
+
+
+
 <a name="2.3.4"></a>
 ## [2.3.4](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.3...v2.3.4) (2017-07-21)
+
+
+### Bug Fixes
+
+* **package:** update chromedriver to version 2.29.0 ([7c50a73](https://github.com/hypery2k/grunt-galenframework/commit/7c50a73))
+* **package:** update geckodriver to version 1.6.0 ([ecac67c](https://github.com/hypery2k/grunt-galenframework/commit/ecac67c))
 
 
 ### Features
