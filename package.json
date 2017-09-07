@@ -25,7 +25,7 @@
   "dependencies": {
     "async": "^2.1.5",
     "chromedriver": "2.32.1",
-    "galenframework": "2.3.4",
+    "galenframework": "2.3.5",
     "geckodriver": "1.8.1",
     "phantomjs-prebuilt": "^2.1.14"
   },
