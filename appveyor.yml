@@ -2,16 +2,20 @@
 # http://www.appveyor.com/docs/appveyor-yml
 environment:
   matrix:
-    # NPM
-    - NPM_VERSION: "3"
-    - NPM_VERSION: "4"
-    # node.js
-    - NODE_VERSION: "4.0"
-    - NODE_VERSION: "4.3"
     - NODE_VERSION: "4"
-    - NODE_VERSION: "5.0"
+      NPM_VERSION: "3"
     - NODE_VERSION: "5"
+      NPM_VERSION: "3"
     - NODE_VERSION: "6"
+      NPM_VERSION: "3"
+    - NODE_VERSION: "7"
+      NPM_VERSION: "3"
+    - NODE_VERSION: "7"
+      NPM_VERSION: "4"
+    - NODE_VERSION: "8"
+      NPM_VERSION: "4"
+    - NODE_VERSION: "8"
+      NPM_VERSION: "5"
 
 platform:
   - x86

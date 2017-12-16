@@ -3,6 +3,9 @@ properties properties: [
   [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/hypery2k/grunt-galenframework'],
 ]
 
+@Library('mare-build-library')
+def nodeJS = new de.mare.ci.jenkins.NodeJS()
+
 node('mac') {
   def buildNumber = env.BUILD_NUMBER
   def branchName = env.BRANCH_NAME
@@ -22,18 +25,16 @@ node('mac') {
     }
 
     stage('Build') {
-      sh "npm install"
+      nodeJS.nvm('install')
     }
 
     stage('Test') {
-      sh "npm run test"
+      nodeJS.nvmRun('test')
     //  junit '*/target/tests.js.xml'
     }
 
     stage('Publish NPM snapshot') {
-      def currentVersionCore = sh(returnStdout: true, script: "npm version | grep \"{\" | tr -s ':'  | cut -d \"'\" -f 4").trim()
-      def newVersionCore = "${currentVersionCore}-${branchName}-${buildNumber}"
-      sh "npm version ${newVersionCore} --no-git-tag-version && npm publish --tag next"
+      nodeJS.publishSnapshot('.', buildNumber, branchName)
     }
 
   } catch (e) {
