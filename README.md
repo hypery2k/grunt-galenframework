@@ -5,7 +5,11 @@
 
 > Grunt plugin for [Galen](http://galenframework.com/) testing framework
 
-[![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework) [![Build status](https://ci.appveyor.com/api/projects/status/wumeagy245308lc3?svg=true)](https://ci.appveyor.com/project/hypery2k/grunt-galenframework) [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) [![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
+[![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework) 
+[![Build status](https://ci.appveyor.com/api/projects/status/wumeagy245308lc3?svg=true)](https://ci.appveyor.com/project/hypery2k/grunt-galenframework) 
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) 
+[![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
+[![Known Vulnerabilities](https://snyk.io/test/github/hypery2k/grunt-galenframework/badge.svg)](https://snyk.io/test/github/hypery2k/grunt-galenframework)
 
 <a name="donation"></a>
 > Feel free to **donate**
