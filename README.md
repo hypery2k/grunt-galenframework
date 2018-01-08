@@ -1,5 +1,7 @@
 # Grunt plugin for the Galenframework
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hypery2k/grunt-galenframework.svg)](https://greenkeeper.io/)
+
 
 [Galen](http://galenframework.com) allows automated testing of look and feel for your responsive websites.
 
