@@ -1,3 +1,21 @@
+<a name="2.3.7"></a>
+## [2.3.7](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.6...v2.3.7) (2018-05-27)
+
+
+### Bug Fixes
+
+* package.json & .snyk to reduce vulnerabilities ([8983312](https://github.com/hypery2k/grunt-galenframework/commit/8983312))
+* **package:** update galenframework to version 2.3.7 ([027d94f](https://github.com/hypery2k/grunt-galenframework/commit/027d94f))
+* package.json to reduce vulnerabilities ([8b460d8](https://github.com/hypery2k/grunt-galenframework/commit/8b460d8))
+
+
+### Features
+
+* **Galen:** Use newer Galen Version 2.3.7 ([6786744](https://github.com/hypery2k/grunt-galenframework/commit/6786744))
+* **node-8:** Adding nodejs 8 support on ci build ([0c481d0](https://github.com/hypery2k/grunt-galenframework/commit/0c481d0))
+
+
+
 <a name="2.3.6"></a>
 ## [2.3.6](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.5...v2.3.6) (2017-12-16)
 
