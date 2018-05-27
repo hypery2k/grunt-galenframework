@@ -9,5 +9,8 @@
   "author": {
     "name": "Martin Reinhardt"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "grunt-galenframework": "file:.."
+  }
 }
