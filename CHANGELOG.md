@@ -1,3 +1,14 @@
+<a name="2.4.0"></a>
+# [2.4.0](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.7...v2.4.0) (2018-11-04)
+
+
+### Features
+
+* **Galen:** Use newer Galen Version 2.4.0 ([908ff9f](https://github.com/hypery2k/grunt-galenframework/commit/908ff9f))
+* **Security:** Update dependencies to solve vulnerability issues ([8887eb7](https://github.com/hypery2k/grunt-galenframework/commit/8887eb7))
+
+
+
 <a name="2.3.7"></a>
 ## [2.3.7](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.6...v2.3.7) (2018-05-27)
 
