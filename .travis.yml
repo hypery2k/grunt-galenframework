@@ -9,6 +9,20 @@ env:
     - NODE_VERSION="9" NPM_VERSION="5" DISPLAY=:99
     - NODE_VERSION="10" NPM_VERSION="6" DISPLAY=:99
 
+
+services:
+  - docker
+
+addons:
+  # From some tests it seems you can only have one firefox addon.
+  # Adding two results in the last one defined being the one installed.
+  firefox: latest
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      - google-chrome-beta
 cache:
   directories:
     - "node_modules"
