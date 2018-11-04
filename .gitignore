@@ -11,3 +11,4 @@ example/dynamic-input-test/dist/
 *.swp
 
 dist/*
+test/package-lock.json
