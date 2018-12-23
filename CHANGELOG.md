@@ -1,3 +1,18 @@
+<a name="2.4.1"></a>
+## [2.4.1](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.0...v2.4.1) (2018-12-23)
+
+
+### Bug Fixes
+
+* package.json to reduce vulnerabilities ([52fd428](https://github.com/hypery2k/grunt-galenframework/commit/52fd428))
+
+
+### Features
+
+* **Galen:** Use latest Galen version ([fcfdbfa](https://github.com/hypery2k/grunt-galenframework/commit/fcfdbfa))
+
+
+
 <a name="2.4.0"></a>
 # [2.4.0](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.7...v2.4.0) (2018-11-04)
 
