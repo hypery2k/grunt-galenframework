@@ -27,7 +27,7 @@
         "chromedriver": "^2.45.0",
         "galenframework": "^2.4.1",
         "geckodriver": "^1.14.1",
-        "snyk": "^1.82.0"
+        "snyk": "^1.121.0"
     },
     "devDependencies": {
         "conventional-changelog-cli": "2.0.0",
