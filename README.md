@@ -15,6 +15,8 @@ This module downloads the GalenFramework for you
 [![Build status](https://ci.appveyor.com/api/projects/status/wumeagy245308lc3?svg=true)](https://ci.appveyor.com/project/hypery2k/grunt-galenframework)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 [![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
+[![npm downloads](https://img.shields.io/npm/dm/grunt-galenframework.svg)](https://www.npmjs.com/package/grunt-galenframework)
+[![npm downloads](https://img.shields.io/npm/dt/grunt-galenframework.svg)](https://www.npmjs.com/package/grunt-galenframework)
 [![Known Vulnerabilities](https://snyk.io/test/github/hypery2k/grunt-galenframework/badge.svg)](https://snyk.io/test/github/hypery2k/grunt-galenframework)
 
 
