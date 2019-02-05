@@ -1,6 +1,6 @@
 {
     "name": "grunt-galenframework",
-    "version": "2.4.1",
+    "version": "2.4.2",
     "description": "Grunt plugin for Galen Framework",
     "files": [
         "tasks",
@@ -38,7 +38,7 @@
         "jshint": "^2.9.6"
     },
     "scripts": {
-        "test": "cd test && npm install && npm install .. && grunt --debug",
+        "test": "cd test && npm install && npm install .. --ignore-scripts --no-save && grunt --debug",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
         "changelog:add": "git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
         "release": "npm run test && npm run changelog && npm run changelog:add",
