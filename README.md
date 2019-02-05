@@ -7,30 +7,26 @@
 
 > Grunt plugin for [Galen](http://galenframework.com/) testing framework
 
-[![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework) 
-[![Build status](https://ci.appveyor.com/api/projects/status/wumeagy245308lc3?svg=true)](https://ci.appveyor.com/project/hypery2k/grunt-galenframework) 
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) 
-[![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
-[![Known Vulnerabilities](https://snyk.io/test/github/hypery2k/grunt-galenframework/badge.svg)](https://snyk.io/test/github/hypery2k/grunt-galenframework)
-
-<a name="donation"></a>
-> Feel free to **donate**
->
-> <a href='http://www.pledgie.com/campaigns/33053'><img alt='Click here to lend your support and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/33053.png?skin_name=chrome' border='0' /></a>
-> <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AGPGLZYNV6Y5S">
-> <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif"/>
-> </img></a>
-> Or donate Bitcoins: bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D
->
-> [![Bitcoin](https://martinreinhardt-online.de/bitcoin.png)](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D)
->
-> Also via [greenaddress](https://greenaddress.it/pay/GA3ZPfh7As3Gc2oP6pQ1njxMij88u/)
-
-
-
 This module downloads the GalenFramework for you
 
 *Warning* - Galen framework requires Java runtime environment to work. Java is ***not*** included in this module.
+
+[![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework)
+[![Build status](https://ci.appveyor.com/api/projects/status/wumeagy245308lc3?svg=true)](https://ci.appveyor.com/project/hypery2k/grunt-galenframework)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
+[![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
+[![npm downloads](https://img.shields.io/npm/dm/grunt-galenframework.svg)](https://www.npmjs.com/package/grunt-galenframework)
+[![npm downloads](https://img.shields.io/npm/dt/grunt-galenframework.svg)](https://www.npmjs.com/package/grunt-galenframework)
+[![Known Vulnerabilities](https://snyk.io/test/github/hypery2k/grunt-galenframework/badge.svg)](https://snyk.io/test/github/hypery2k/grunt-galenframework)
+
+
+## Donation
+
+Feel free to [donate via Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H8TR8246RCDJG) or [Bitcoins ](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D): bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D
+
+[![Bitcoin](https://martinreinhardt-online.de/assets/img/bitcoin.png)](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D)
+ Also via [greenaddress](https://greenaddress.it/pay/GA3ZPfh7As3Gc2oP6pQ1njxMij88u/)
+
 
 ## Getting started
 In the project directory run:

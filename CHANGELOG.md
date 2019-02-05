@@ -1,3 +1,21 @@
+<a name="2.4.2"></a>
+## [2.4.2](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.1...v2.4.2) (2019-02-05)
+
+
+### Bug Fixes
+
+* **Dependencies:** Correct dependency setup ([4721863](https://github.com/hypery2k/grunt-galenframework/commit/4721863))
+* **Tests:** Corrected test setup ([27567fa](https://github.com/hypery2k/grunt-galenframework/commit/27567fa))
+
+
+### Features
+
+* **Galen:** Use latest Galen version ([4f8de4b](https://github.com/hypery2k/grunt-galenframework/commit/4f8de4b))
+* **Webdriver:** Update chromedriver ([c04d277](https://github.com/hypery2k/grunt-galenframework/commit/c04d277))
+* **Webdriver:** Update geckodriver and chromedriver ([7c26563](https://github.com/hypery2k/grunt-galenframework/commit/7c26563))
+
+
+
 <a name="2.4.1"></a>
 ## [2.4.1](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.0...v2.4.1) (2018-12-23)
 

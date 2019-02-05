@@ -11,6 +11,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "grunt-galenframework": "file:.."
+    "async": "^2.6.1",
+    "grunt-galenframework": "*"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3"
+  },
+  "scripts": {
+    "grunt": "grunt debug"
   }
 }
