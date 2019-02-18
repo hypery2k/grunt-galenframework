@@ -1,6 +1,6 @@
 {
     "name": "grunt-galenframework",
-    "version": "2.4.2",
+    "version": "2.4.3",
     "description": "Grunt plugin for Galen Framework",
     "files": [
         "tasks",
@@ -25,12 +25,12 @@
     "dependencies": {
         "async": "^2.1.5",
         "chromedriver": "^2.46.0",
-        "galenframework": "^2.4.2",
-        "geckodriver": "^1.14.1",
-        "snyk": "^1.121.0"
+        "galenframework": "^2.4.3",
+        "geckodriver": "1.14.1",
+        "snyk": "^1.132.2"
     },
     "devDependencies": {
-        "conventional-changelog-cli": "2.0.0",
+        "conventional-changelog-cli": "2.0.12",
         "grunt": "^1.0.3",
         "grunt-cli": "1.2.0",
         "jsdoc": "3.5.5",

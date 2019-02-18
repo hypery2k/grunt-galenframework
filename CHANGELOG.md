@@ -1,4 +1,14 @@
-<a name="2.4.2"></a>
+## [2.4.3](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.2...v2.4.3) (2019-02-18)
+
+
+### Features
+
+* **Galen:** Use latest Galen version ([18053ab](https://github.com/hypery2k/grunt-galenframework/commit/18053ab))
+* **Security:** Resolve security alerts ([928f6a7](https://github.com/hypery2k/grunt-galenframework/commit/928f6a7))
+* **Webdriver:** Use latest chromedriver and pin geckodriver ([16e3d9b](https://github.com/hypery2k/grunt-galenframework/commit/16e3d9b))
+
+
+
 ## [2.4.2](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.1...v2.4.2) (2019-02-05)
 
 
@@ -16,7 +26,6 @@
 
 
 
-<a name="2.4.1"></a>
 ## [2.4.1](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.0...v2.4.1) (2018-12-23)
 
 
@@ -31,7 +40,6 @@
 
 
 
-<a name="2.4.0"></a>
 # [2.4.0](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.7...v2.4.0) (2018-11-04)
 
 
@@ -42,7 +50,6 @@
 
 
 
-<a name="2.3.7"></a>
 ## [2.3.7](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.6...v2.3.7) (2018-05-27)
 
 
@@ -60,7 +67,6 @@
 
 
 
-<a name="2.3.6"></a>
 ## [2.3.6](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.5...v2.3.6) (2017-12-16)
 
 
@@ -73,7 +79,6 @@
 
 
 
-<a name="2.3.5"></a>
 ## [2.3.5](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.4...v2.3.5) (2017-09-07)
 
 
@@ -87,7 +92,6 @@
 
 
 
-<a name="2.3.4"></a>
 ## [2.3.4](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.3...v2.3.4) (2017-07-21)
 
 
@@ -103,7 +107,6 @@
 
 
 
-<a name="2.3.3"></a>
 ## [2.3.3](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.2...v2.3.3) (2017-04-03)
 
 
@@ -120,7 +123,6 @@
 
 
 
-<a name="2.3.2"></a>
 ## [2.3.2](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.1...v2.3.2) (2017-02-09)
 
 
@@ -138,27 +140,22 @@
 
 
 
-<a name="2.3.1"></a>
 ## [2.3.1](https://github.com/hypery2k/grunt-galenframework/compare/v2.3.0...v2.3.1) (2016-10-14)
 
 
 
-<a name="2.2.6"></a>
 ## [2.2.6](https://github.com/hypery2k/grunt-galenframework/compare/v2.2.5...v2.2.6) (2016-07-12)
 
 
 
-<a name="2.2.5"></a>
 ## [2.2.5](https://github.com/hypery2k/grunt-galenframework/compare/v2.2.3...v2.2.5) (2016-04-15)
 
 
 
-<a name="1.0.0"></a>
 # [1.0.0](https://github.com/hypery2k/grunt-galenframework/compare/v0.5.5...v1.0.0) (2016-01-15)
 
 
 
-<a name="0.5.5"></a>
 ## [0.5.5](https://github.com/hypery2k/grunt-galenframework/compare/48599d1...v0.5.5) (2015-12-14)
 
 
