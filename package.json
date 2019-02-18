@@ -30,7 +30,7 @@
         "snyk": "^1.132.2"
     },
     "devDependencies": {
-        "conventional-changelog-cli": "2.0.0",
+        "conventional-changelog-cli": "2.0.12",
         "grunt": "^1.0.3",
         "grunt-cli": "1.2.0",
         "jsdoc": "3.5.5",
