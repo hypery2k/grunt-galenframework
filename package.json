@@ -26,7 +26,7 @@
         "async": "^2.1.5",
         "chromedriver": "^2.46.0",
         "galenframework": "^2.4.3",
-        "geckodriver": "1.15.1",
+        "geckodriver": "1.16.1",
         "snyk": "^1.136.0"
     },
     "devDependencies": {
