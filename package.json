@@ -23,7 +23,7 @@
         "BDD"
     ],
     "dependencies": {
-        "async": "^2.1.5",
+        "async": "^3.0.1",
         "chromedriver": "^73.0.0",
         "galenframework": "^2.4.3",
         "geckodriver": "1.16.2",
