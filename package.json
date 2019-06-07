@@ -24,12 +24,12 @@
     ],
     "dependencies": {
         "async": "^3.0.1",
-        "chromedriver": "^73.0.0",
         "galenframework": "^2.4.3",
         "geckodriver": "1.16.2",
         "snyk": "^1.164.0"
     },
     "devDependencies": {
+        "chromedriver": "^74.0.0",
         "conventional-changelog-cli": "2.0.17",
         "grunt": "^1.0.3",
         "grunt-cli": "1.2.0",
