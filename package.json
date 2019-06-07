@@ -34,7 +34,7 @@
         "grunt": "^1.0.3",
         "grunt-cli": "1.2.0",
         "jsdoc": "3.6.0",
-        "jsdoc-to-markdown": "3.0.4",
+        "jsdoc-to-markdown": "5.0.0",
         "jshint": "^2.9.6"
     },
     "scripts": {
