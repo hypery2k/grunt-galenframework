@@ -12,12 +12,16 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.6.1",
-    "grunt-galenframework": "*"
+    "grunt-galenframework": "*",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "grunt": "^1.0.3"
   },
   "scripts": {
-    "grunt": "grunt debug"
-  }
+    "grunt": "grunt debug",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
