@@ -33,7 +33,7 @@
     "conventional-changelog-cli": "2.0.17",
     "grunt": "^1.0.3",
     "grunt-cli": "1.2.0",
-    "jsdoc": "3.6.0",
+    "jsdoc": "3.6.3",
     "jsdoc-to-markdown": "5.0.0",
     "jshint": "^2.9.6"
   },
