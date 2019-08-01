@@ -29,8 +29,9 @@
     "snyk": "^1.189.0"
   },
   "devDependencies": {
+
     "chromedriver": "^76.0.0",
-    "conventional-changelog-cli": "2.0.21",
+    "conventional-changelog-cli": "2.0.23",
     "grunt": "^1.0.3",
     "grunt-cli": "1.2.0",
     "jsdoc": "3.6.3",
