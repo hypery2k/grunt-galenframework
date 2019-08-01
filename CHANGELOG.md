@@ -1,3 +1,21 @@
+## [2.4.4](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.3...v2.4.4) (2019-08-01)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([#96](https://github.com/hypery2k/grunt-galenframework/issues/96)) ([cbc1797](https://github.com/hypery2k/grunt-galenframework/commit/cbc1797))
+* **Security:** Reduce vulnerabilities ([#106](https://github.com/hypery2k/grunt-galenframework/issues/106)) ([6665364](https://github.com/hypery2k/grunt-galenframework/commit/6665364))
+* **Security:** Reduce vulnerabilities ([#107](https://github.com/hypery2k/grunt-galenframework/issues/107)) ([0765786](https://github.com/hypery2k/grunt-galenframework/commit/0765786))
+* **Security:** Reduce vulnerabilities ([#108](https://github.com/hypery2k/grunt-galenframework/issues/108)) ([9088c60](https://github.com/hypery2k/grunt-galenframework/commit/9088c60))
+* **Security:** Reduce vulnerabilities ([#109](https://github.com/hypery2k/grunt-galenframework/issues/109)) ([a5a2c77](https://github.com/hypery2k/grunt-galenframework/commit/a5a2c77))
+
+
+### Features
+
+* **Galen:** Use newer Galen ([064e8d7](https://github.com/hypery2k/grunt-galenframework/commit/064e8d7))
+
+
+
 ## [2.4.3](https://github.com/hypery2k/grunt-galenframework/compare/v2.4.2...v2.4.3) (2019-02-18)
 
 
