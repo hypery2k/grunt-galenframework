@@ -54,3 +54,14 @@ patch:
         patched: '2019-07-04T03:07:00.149Z'
     - grunt-galenframework > snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
         patched: '2019-07-04T03:07:00.149Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - grunt-galenframework > geckodriver > https-proxy-agent:
+        patched: '2019-10-04T02:56:32.537Z'
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T02:56:32.537Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T02:56:32.537Z'
+    - grunt-galenframework > snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T02:56:32.537Z'
+    - grunt-galenframework > snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T02:56:32.537Z'
