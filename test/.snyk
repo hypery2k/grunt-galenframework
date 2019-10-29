@@ -54,6 +54,26 @@ patch:
         patched: '2019-07-04T03:07:00.149Z'
     - grunt-galenframework > snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
         patched: '2019-07-04T03:07:00.149Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - grunt-galenframework > snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - grunt-galenframework > snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - grunt-galenframework > snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - grunt-galenframework > snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
+    - grunt-galenframework > snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-29T05:26:35.613Z'
   SNYK-JS-HTTPSPROXYAGENT-469131:
     - grunt-galenframework > geckodriver > https-proxy-agent:
         patched: '2019-10-04T02:56:32.537Z'
