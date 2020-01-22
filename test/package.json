@@ -13,7 +13,7 @@
   "dependencies": {
     "async": "^2.6.1",
     "grunt-galenframework": "*",
-    "snyk": "^1.239.3"
+    "snyk": "^1.278.2"
   },
   "devDependencies": {
     "grunt": "^1.0.3"
